@@ -8,12 +8,12 @@ class Faq::Content::Setting < Cms::ContentSetting
                                 options: [%w(管理者承認が必要 with_admin)]
   # set_config :default_recognizers, :name => "承認/デフォルト承認者"
   set_config :allowed_attachment_type, name: "添付ファイル/許可する種類",
-                                       comment: "（例　<tt>gif,jpg,png,pdf,doc,xls,ppt,odt,ods,odp</tt> ）"
+                                       comment: "（例　gif,jpg,png,pdf,doc,xls,ppt,odt,ods,odp ）"
   set_config :attachment_resize_size, name: "添付ファイル/自動リサイズ",
                                       options: Sys::Model::Base::File.sizes,
                                       style: 'width: 100px;'
   set_config :attachment_thumbnail_size, name: "添付ファイル/サムネイルサイズ",
-                                         comment: "（例　<tt>120x90</tt> ）",
+                                         comment: "（例　120x90 ）",
                                          style: 'width: 100px;'
 
   validate :validate_value
